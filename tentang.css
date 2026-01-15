@@ -1,0 +1,81 @@
+body{
+    background-color:#F9F4F0 ;
+}
+
+nav{
+    background-color: #D5DDC0 ;
+    height: 5rem;
+    width: 100%;
+}
+.Mteranusa{
+    left: 2rem;
+    top: 50px;
+    
+}
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    margin-top: -1rem;
+    /* padding-bottom: 0.8rem; */
+    color: #3F4B15;
+}
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-left: 2rem;
+    color: #3F4B15;
+    margin-top: 0.3rem;
+}
+
+.Mpulau{
+    left: 25%;
+    top: 5rem;
+    width: auto;
+    height: 15vh;
+    position: relative;
+}
+.Mnama-pulau{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 4rem;
+    padding-left: 40rem;
+    margin-top: -4rem;
+}
+.Mdeskrip-pulau{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-left: 40rem;
+    width: 70%;
+}
+
+.Mline{
+    width: 100%;
+    height: 5px;
+    background-color: #104026;
+    margin-top: 2rem;
+}
+
+.Mflora{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 3rem;
+    padding-left: 12rem;
+    margin-top: 4rem;
+    width: 5rem;
+    position:relative;
+}
+.Mdeskrip-pulau-2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-left: 45rem;
+    width: 70%;
+    margin-top: -7rem;
+}

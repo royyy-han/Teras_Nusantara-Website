@@ -139,6 +139,34 @@ body{
     background-image: url('https://cdngnfi2.sgp1.digitaloceanspaces.com/gnfi/uploads/articles/large-mengenal-kokoleceran-flora-identitas-provinsi-banten-yang-terancam-punah-ef9WALssLC.jpg');
 }
 
+/* gambar page sulawesi */
+.container.sulawesi .card1:nth-child(1)::before{
+    /* Nepenthes glabrata */
+    background-image: url('https://cdn11.bigcommerce.com/s-4kt71d4v98/images/stencil/600x600/products/150/1159/glabrataaristolo1__89404.1610058431.jpg?c=1');
+}
+.container.sulawesi .card1:nth-child(2)::before {
+    /* Nepenthes hamata */
+    background-image: url('https://i.pinimg.com/originals/30/19/fc/3019fc31d3b104ddc6195737c4f5102e.jpg');
+}
+.container.sulawesi .card1:nth-child(3)::before {
+    /* Diospyros celebica:*/
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.JxhUwOg2bmK1znRgDBmgQQHaJ3?rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+/* gambar page papua */
+.container.Papua .card1:nth-child(1)::before{
+    /* Anggrek hitam */
+    background-image: url('https://tse4.mm.bing.net/th/id/OIP.lcEt39QUEPEkcvkMrHqcPAAAAA?w=300&h=300&rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+.container.Papua .card1:nth-child(2)::before {
+    /* Eukaliptus */
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.hGJLj1kcgKv2_j7862ID5wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+.container.Papua .card1:nth-child(3)::before {
+    /* Bintangur */
+    background-image: url('https://yayasanmqis.or.id/wp-content/uploads/2018/01/BUAH-NYAMPLUNG-BINTANGUR-2-calophyllum-inophyllum.jpg');
+}
+
 .card1 .arrow {
     position: absolute;
     top: 10px;

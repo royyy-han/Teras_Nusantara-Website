@@ -1,57 +1,36 @@
 body{
+    padding: 0;
+    margin: 0;
     background-color:#F9F4F0 ;
 }
 
-nav{
-    background-color: #D5DDC0 ;
-    height: 5rem;
-    width: 100%;
-}
-.Mteranusa{
-    left: 2rem;
-    top: 50px;
-    
-}
-.poppins-semibold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1.5rem;
-    padding-left: 2rem;
-    margin-top: -1rem;
-    /* padding-bottom: 0.8rem; */
-    color: #3F4B15;
-}
-.poppins-extralight {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    padding-left: 2rem;
-    color: #3F4B15;
-    margin-top: 0.3rem;
-}
 
+
+ /* isi */
 .Mpulau{
-    left: 25%;
-    top: 5rem;
+    left: 20%;
+    top: 8rem;
     width: auto;
-    height: 15vh;
-    position: relative;
+    height: 25vh;
+    position: absolute;
 }
 .Mnama-pulau{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 4rem;
-    padding-left: 40rem;
-    margin-top: -4rem;
+    padding-left: 33rem;
+    margin-top: 2rem;
+    position: relative;
+    margin-bottom: -1rem;
 }
 .Mdeskrip-pulau{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
-    padding-left: 40rem;
-    width: 70%;
+    padding-left: 33rem;
+    width: 50%;
+    /* margin-top: 1rem; */
 }
 
 .Mline{
@@ -61,9 +40,9 @@ nav{
     margin-top: 2rem;
 }
 
-.Mflora{
+.Mflora-fauna{
     font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 900;
     font-style: normal;
     font-size: 3rem;
     padding-left: 12rem;
@@ -75,7 +54,217 @@ nav{
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-style: normal;
-    padding-left: 45rem;
-    width: 70%;
+    padding-left: 33rem;
+    width: 50%;
     margin-top: -7rem;
+    padding-bottom: 2rem;
+}
+
+
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.card1 {
+    flex: 0.8;
+    aspect-ratio: 2/3;
+    /* background-size: cover;
+    background-position: center; */
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: flex 0.3s, aspect-ratio 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transition: filter 0.3s;
+}
+
+/* gambar page sumatera */
+.card1:nth-child(1)::before{
+    /* raflesia */
+    background-image: url('https://geopinas.com/wp-content/uploads/2024/09/declining_rafflesia_species_populations.jpg');
+}
+.card1:nth-child(2)::before {
+    /* kenanga */
+    background-image: url('https://res.cloudinary.com/dk0z4ums3/image/upload/v1604245157/attached_image/manfaat-bunga-kenanga-untuk-kesehatan.jpg');
+}
+.card1:nth-child(3)::before {
+    /* anggrek tien*/
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.UvqMCouzHgdS8C0z-wovagHaE8?w=745&h=497&rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+/* gambar page kalimantan */
+.container.alt .card1:nth-child(1)::before{
+    /* kantong semar berbulu */
+    background-image: url('https://www.borneohouseboat.com/assets/photos/photo_30.jpg');
+}
+.container.alt .card1:nth-child(2)::before {
+    /* tenggaring */
+    background-image: url('https://4.bp.blogspot.com/-40kvkd_Z2Pw/VhdGuGBTuUI/AAAAAAAAHgs/E-wQy_mdztU/s1600/Tanaman-Kapulasan.jpg');
+}
+.container.alt .card1:nth-child(3)::before {
+    /* tengkawang */
+    background-image: url('https://th.bing.com/th/id/R.15eeaed3f6c429190deb1684462a0c38?rik=1V7J0xz3%2fb1s2Q&riu=http%3a%2f%2feditorial.femaledaily.com%2fwp-content%2fuploads%2f2023%2f11%2ftengkawang-3.jpg&ehk=aB8f%2f3%2bnLr72xa2UYRmKehE9H6Ks0ztysovdLcBQdFw%3d&risl=&pid=ImgRaw&r=0');
+}
+
+/* gambar page jawa */
+.container.jawa .card1:nth-child(1)::before{
+    /* cempaka putih */
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijh9fPA1JsC3X8A23YZPtTBTq5vTh934Rn6N2yjk5UdPIYDJVKweMVo7OdaXzoB4fl12ppQlYv4fiegaeEpTUh8vefNIKJI04-CmjycKt3lykcnr1HoloUNY_mOiBNoZ4KpTl6udiSC-HwIehHKHdnNWnHLUSCJLMbROzpVn2BZeNKIzJDjYkB9uVgpSA2/s1600/cempaka%20putih.JPG');
+}
+.container.jawa .card1:nth-child(2)::before {
+    /* edelweis jawa */
+    background-image: url('https://pict.sindonews.net/dyn/732/pena/news/2023/03/08/766/1041363/mengenal-edelweis-bunga-abadi-soe-hok-gie-dan-ranca-upas-ntd.JPG');
+}
+.container.jawa .card1:nth-child(3)::before {
+    /* kokoleceran */
+    background-image: url('https://cdngnfi2.sgp1.digitaloceanspaces.com/gnfi/uploads/articles/large-mengenal-kokoleceran-flora-identitas-provinsi-banten-yang-terancam-punah-ef9WALssLC.jpg');
+}
+
+.card1 .arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+    z-index: 3;
+}
+.card1 .line {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 0 1px 2px #000;
+    z-index: 3;
+}
+.card1 .title {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 18px;
+    text-align: center;
+    z-index: 3;
+}
+.card1.expanded .title {
+    display: none;
+}
+.card1.expanded::before {
+    filter: brightness(50%);
+    /* filter: blur(3px); */
+}
+.card1 .content {
+    position: relative;
+    z-index: 2;
+    display: none;
+    text-align:start;
+    padding: 10px;
+    /* background: rgba(80, 79, 79, 0.8); */
+    border-radius: 4px;
+    margin: 20px;
+    color: #fff;
+}
+.card1 .content h2 {
+    margin-bottom: 10px;
+}
+.card1 .content p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.card1.expanded {
+    flex: 2;
+    aspect-ratio: 2;
+}
+.card1.expanded .content {
+    display: block;
+}
+.card1.expanded .arrow {
+    display: none;
+}
+.card1.expanded .line {
+    display: none;
+}
+hr {
+    margin: 10px 0;
+}
+
+/* Container untuk semua card2 Hewan */
+.card2-container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px); /* 3 kolom, masing-masing 300px */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* Card2 container Hewan*/
+.card2 {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+}
+
+/* Gambar diatur lewat CSS */
+.card2-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Konten card */
+.card2-content {
+    padding: 15px;
+}
+
+.card2-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card2-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* Responsif untuk layar kecil */
+@media (max-width: 480px) {
+    .card2-image {
+        height: 150px;
+    }
 }

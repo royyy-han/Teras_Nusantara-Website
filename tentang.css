@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     background-color:#F9F4F0 ;
+    overflow-x: hidden;
 }
 
 

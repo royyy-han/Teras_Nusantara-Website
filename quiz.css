@@ -18,6 +18,17 @@ body {
   align-items: center;
 }
 
+/* .logo-nav {
+    position: absolute;
+    margin-top: 10px;
+    left: -15px;
+}
+
+.logo-nav img {
+    height: auto;
+    width: 85px;
+} */
+
 .brand p {
   font-size: 15px;
   color: #555;

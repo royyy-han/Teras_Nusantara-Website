@@ -19,9 +19,9 @@
             <a href="#">Beranda</a>
             <a href="#">Kuis</a>
             <a href="#">Tentang</a>
-            <a href="#" class="btn-outline">Contact us</a>
+
         </nav>
-    </header>
+    </header>   
 
     <main class="main">
         <h1 class="title">QUIZ INTERAKTIF</h1>
@@ -29,39 +29,17 @@
         <section class="quiz-card">
             <button class="btn-exit">Keluar</button>
 
-            <h3 class="question">
-                Pulau manakah yang terkenal dengan Bunga Raflesia?
-            </h3>
+            <h3 class="question" id="questionText"></h3>
 
-            <form class="options">
-                <label class="option">
-                    <input type="radio" name="quiz">
-                    <span>Sumatera</span>
-                </label>
+            <form class="options" id="options"></form>
 
-                <label class="option">
-                    <input type="radio" name="quiz">
-                    <span>Papua</span>
-                </label>
-
-                <label class="option">
-                    <input type="radio" name="quiz">
-                    <span>Jawa</span>
-                </label>
-
-                <label class="option">
-                    <input type="radio" name="quiz">
-                    <span>Sulawesi</span>
-                </label>
-
-                <div class="nav-btn">
-                    <button type="button">Back</button>
-                    <button type="button">Next</button>
-                </div>
-            </form>
+            <div class="nav-btn">
+                <button type="button" id="backBtn">Back</button>
+                <button type="button" id="nextBtn">Next</button>
+            </div>
         </section>
 
-        <button class="submit-btn">Kirim</button>
+        <button class="submit-btn hidden" id="submitBtn">Kirim</button>
     </main>
 
     <footer class="footer">
@@ -83,11 +61,11 @@
 
             <div class="footer-menu">
                 <h3>About</h3>
-                <ul> 
+                <ul>
                     <li><a href="#">Beranda</a></li>
                     <li><a href="#">Quiz</a></li>
                     <li><a href="#">Tentang</a></li>
-                    <li><a href="#">Contact Us</a></li>
+
                 </ul>
             </div>
 
@@ -107,6 +85,7 @@
         </div>
     </footer>
 
+    <script src="quiz.js"></script>
 </body>
 
 </html>

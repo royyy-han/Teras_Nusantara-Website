@@ -5,6 +5,26 @@ body {
     overflow-x: hidden;
 }
 
+.navbar {
+    background: #e4ead6;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand p {
+    font-size: 15px;
+    color: #555;
+}
+
+.menu a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #2f2f2f;
+    font-size: 17px;
+}
+
 
 
 /* isi */
@@ -316,7 +336,81 @@ hr {
     margin-bottom: 15px;
 }
 
+.footer {
+    background-color: #e7f0dc;
+    padding-top: 40px;
+}
 
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    display: flex;
+    gap: 20px;
+    max-width: 500px;
+    align-items: flex-start;
+}
+
+.footer-brand img {
+    width: 110px;
+    height: auto;
+}
+
+.brand-text h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.brand-text p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-menu h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #1f2f1f;
+}
+
+.footer-bottom {
+    background-color: #3F4B15;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 
 
 

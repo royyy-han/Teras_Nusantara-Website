@@ -65,12 +65,19 @@ const quizQuestions = getRandomQuestions(allQuestions, 5);
 let currentIndex = 0;
 let userAnswers = new Array(quizQuestions.length).fill(null);
 
-// ================== ELEMENT (HARUS SESUAI ID HTML) ==================
+// ================== ELEMENT ==================
 const questionText = document.getElementById("questionText");
 const optionsContainer = document.getElementById("options");
 const backBtn = document.getElementById("backBtn");
 const nextBtn = document.getElementById("nextBtn");
 const submitBtn = document.getElementById("submitBtn");
+
+const scoreModal = document.getElementById("scoreModal");
+const scoreValue = document.getElementById("scoreValue");
+const backToArticle = document.getElementById("backToArticle");
+
+// ================== GLOBAL INTERVAL ==================
+let scoreInterval;
 
 // ================== RENDER SOAL ==================
 function renderQuestion() {
@@ -99,10 +106,8 @@ function renderQuestion() {
         optionsContainer.appendChild(label);
     });
 
-    // tombol back
     backBtn.disabled = currentIndex === 0;
 
-    // tombol next / kirim
     if (currentIndex === quizQuestions.length - 1) {
         nextBtn.classList.add("hidden");
         submitBtn.classList.remove("hidden");
@@ -110,6 +115,21 @@ function renderQuestion() {
         nextBtn.classList.remove("hidden");
         submitBtn.classList.add("hidden");
     }
+}
+
+// ================== ANIMASI SKOR ==================
+function animateScore(finalScore) {
+    let current = 0;
+    scoreValue.textContent = 0;
+
+    scoreInterval = setInterval(() => {
+        current++;
+        scoreValue.textContent = current;
+
+        if (current >= finalScore) {
+            clearInterval(scoreInterval);
+        }
+    }, 150);
 }
 
 // ================== EVENT ==================
@@ -128,15 +148,30 @@ backBtn.addEventListener("click", () => {
 });
 
 submitBtn.addEventListener("click", () => {
-    let score = 0;
 
+    const hasAnsweredAtLeastOne = userAnswers.some(answer => answer !== null);
+
+    if (!hasAnsweredAtLeastOne) {
+        alert("⚠️ Kamu belum menjawab satu pun soal.\nMinimal jawab 1 soal ya 😊");
+        return;
+    }
+
+    let score = 0;
     quizQuestions.forEach((q, i) => {
-        if (userAnswers[i] === q.answer) {
-            score++;
-        }
+        if (userAnswers[i] === q.answer) score++;
     });
 
-    alert(`Quiz selesai!\nSkor kamu: ${score} / ${quizQuestions.length}`);
+    scoreModal.classList.remove("hidden");
+    animateScore(score);
+});
+
+// ================== TOMBOL KEMBALI KE ARTIKEL ==================
+backToArticle.addEventListener("click", () => {
+    if (scoreInterval) {
+        clearInterval(scoreInterval);
+    }
+
+    window.location.href = "jawa.html"; // ganti sesuai halaman artikel kamu
 });
 
 // ================== INIT ==================

@@ -115,6 +115,59 @@ body {
   cursor: pointer;
 }
 
+/* ===== SCORE MODAL ===== */
+.score-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.score-modal.hidden {
+  display: none;
+}
+
+.score-box {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  width: 300px;
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.score-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4caf50;
+  margin: 10px 0 20px;
+}
+
+.score-box button {
+  background: #6b8e23;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
 .hidden {
   display: none;
 }

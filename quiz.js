@@ -54,11 +54,8 @@ const allQuestions = [
 
 // ================== ACAK & AMBIL 5 SOAL ==================
 function getRandomQuestions(all, total = 5) {
-    return [...all]
-        .sort(() => Math.random() - 0.5)
-        .slice(0, total);
+    return [...all].sort(() => Math.random() - 0.5).slice(0, total);
 }
-
 const quizQuestions = getRandomQuestions(allQuestions, 5);
 
 // ================== STATE ==================
@@ -79,10 +76,20 @@ const backToArticle = document.getElementById("backToArticle");
 // ================== GLOBAL INTERVAL ==================
 let scoreInterval;
 
+// ================== NEXT BUTTON STATE ==================
+function updateNextButtonState() {
+    if (userAnswers[currentIndex] === null) {
+        nextBtn.disabled = true;
+        nextBtn.classList.add("disabled");
+    } else {
+        nextBtn.disabled = false;
+        nextBtn.classList.remove("disabled");
+    }
+}
+
 // ================== RENDER SOAL ==================
 function renderQuestion() {
     const q = quizQuestions[currentIndex];
-
     questionText.textContent = `${currentIndex + 1}. ${q.question}`;
     optionsContainer.innerHTML = "";
 
@@ -95,19 +102,24 @@ function renderQuestion() {
             <span>${opt}</span>
         `;
 
+        const input = label.querySelector("input");
+
         if (userAnswers[currentIndex] === i) {
-            label.querySelector("input").checked = true;
+            input.checked = true;
         }
 
-        label.querySelector("input").addEventListener("change", () => {
+        input.addEventListener("change", () => {
             userAnswers[currentIndex] = i;
+            updateNextButtonState();
         });
 
         optionsContainer.appendChild(label);
     });
 
+    // Back
     backBtn.disabled = currentIndex === 0;
 
+    // Next / Submit
     if (currentIndex === quizQuestions.length - 1) {
         nextBtn.classList.add("hidden");
         submitBtn.classList.remove("hidden");
@@ -115,6 +127,8 @@ function renderQuestion() {
         nextBtn.classList.remove("hidden");
         submitBtn.classList.add("hidden");
     }
+
+    updateNextButtonState();
 }
 
 // ================== ANIMASI SKOR ==================
@@ -148,8 +162,7 @@ backBtn.addEventListener("click", () => {
 });
 
 submitBtn.addEventListener("click", () => {
-
-    const hasAnsweredAtLeastOne = userAnswers.some(answer => answer !== null);
+    const hasAnsweredAtLeastOne = userAnswers.some(a => a !== null);
 
     if (!hasAnsweredAtLeastOne) {
         alert("⚠️ Kamu belum menjawab satu pun soal.\nMinimal jawab 1 soal ya 😊");
@@ -165,14 +178,34 @@ submitBtn.addEventListener("click", () => {
     animateScore(score);
 });
 
-// ================== TOMBOL KEMBALI KE ARTIKEL ==================
+// ================== KEMBALI KE ARTIKEL ==================
 backToArticle.addEventListener("click", () => {
-    if (scoreInterval) {
-        clearInterval(scoreInterval);
-    }
-
-    window.location.href = "jawa.html"; // ganti sesuai halaman artikel kamu
+    if (scoreInterval) clearInterval(scoreInterval);
+    window.location.href = "jawa.html";
 });
 
 // ================== INIT ==================
 renderQuestion();
+
+// ================== EXIT MODAL ANIMATED ==================
+const exitBtn = document.querySelector(".btn-exit");
+const exitModal = document.getElementById("exitModal");
+const cancelExit = document.getElementById("cancelExit");
+const confirmExit = document.getElementById("confirmExit");
+
+exitBtn.addEventListener("click", () => {
+    exitModal.classList.remove("hidden");
+});
+
+cancelExit.addEventListener("click", () => {
+    exitModal.classList.add("hidden");
+});
+
+confirmExit.addEventListener("click", () => {
+    document.body.style.transition = "opacity 0.4s ease";
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+        window.location.href = "beranda.html";
+    }, 400);
+});

@@ -1,27 +1,39 @@
-/* ===== RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #f7f5ef;
-  color: #2f2f2f;
+  margin: 0;
+  padding: 0;
+  background-color: #F9F4F0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 .navbar {
   background: #e4ead6;
-  padding: 20px 60px;
+  padding: 20px 0;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 60px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.brand h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
 .brand p {
-  font-size: 15px;
+  margin: 4px 0 0;
+  font-size: 14px;
   color: #555;
 }
 
@@ -29,7 +41,7 @@ body {
   margin-left: 25px;
   text-decoration: none;
   color: #2f2f2f;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .btn-outline {
@@ -252,49 +264,34 @@ button.disabled {
   color: #ffffff;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 .footer {
   background-color: #e7f0dc;
-  padding-top: 40px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: auto;
-  padding: 40px 20px;
-  display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 60px 60px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
 }
 
 .footer-brand {
   display: flex;
   gap: 20px;
-  max-width: 500px;
   align-items: flex-start;
 }
 
 .footer-brand img {
-  width: 110px;
+  width: 100px;
 }
 
 .brand-text h2 {
-  font-size: 24px;
-  font-weight: bold;
+  margin: 0;
+  font-size: 22px;
 }
 
 .brand-text p {
@@ -305,15 +302,17 @@ button.disabled {
 
 .footer-menu h3 {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .footer-menu ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-menu ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 14px;
 }
 
@@ -326,11 +325,48 @@ button.disabled {
 .footer-bottom {
   background-color: #3F4B15;
   text-align: center;
-  padding: 15px 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 18px 10px;
 }
 
 .footer-bottom p {
+  margin: 0;
   color: #fff;
   font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar-inner {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .menu a {
+    margin: 0 10px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

@@ -1,20 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     background-color: #F9F4F0;
+    font-family: "Poppins", sans-serif;
     overflow-x: hidden;
 }
 
+/* ================= NAVBAR ================= */
 .navbar {
     background: #e4ead6;
-    padding: 20px 60px;
+    padding: 20px 0;
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 60px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.brand h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
 .brand p {
-    font-size: 15px;
+    margin: 4px 0 0;
+    font-size: 14px;
     color: #555;
 }
 
@@ -22,105 +41,298 @@ body {
     margin-left: 25px;
     text-decoration: none;
     color: #2f2f2f;
-    font-size: 17px;
+    font-size: 16px;
 }
 
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 60px;
+}
 
-
-/* isi */
 .Mpulau {
-    left: 20%;
-    top: 8rem;
+    height: 220px;
     width: auto;
-    height: 25vh;
-    position: absolute;
+    flex-shrink: 0;
+}
+
+.hero-text {
+    max-width: 600px;
 }
 
 .Mnama-pulau {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
     font-size: 4rem;
-    padding-left: 33rem;
-    margin-top: 2rem;
-    position: relative;
-    margin-bottom: -1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .Mdeskrip-pulau {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    padding-left: 33rem;
-    width: 50%;
-    /* margin-top: 1rem; */
+    font-weight: 300;
+    line-height: 1.7;
 }
 
+/* ================= LINE ================= */
 .Mline {
     width: 100%;
     height: 5px;
     background-color: #104026;
-    margin-top: 2rem;
+    margin: 40px 0;
 }
 
+/* ================= SECTION TITLE ================= */
 .Mflora-fauna {
-    font-family: sans-serif;
-    font-weight: 900;
-    font-style: normal;
+    max-width: 1200px;
+    margin: 60px auto 10px;
+    padding: 0 60px;
     font-size: 3rem;
-    padding-left: 12rem;
-    margin-top: 4rem;
-    width: 5rem;
-    position: relative;
+    font-weight: 800;
 }
 
 .Mdeskrip-pulau-2 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    padding-left: 33rem;
-    width: 50%;
-    margin-top: -7rem;
-    padding-bottom: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 60px 40px;
+    font-weight: 300;
+    line-height: 1.7;
 }
 
-
+/* ================= VEGETASI (CARD EXPAND) ================= */
 .container {
     display: flex;
-    gap: 10px;
-    padding: 10px;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 2rem;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 0 60px;
 }
 
+
 .card1 {
-    flex: 0.8;
-    aspect-ratio: 2/3;
-    /* background-size: cover;
-    background-position: center; */
-    border-radius: 8px;
+    flex: 1;
+    height: 420px;
+    border-radius: 10px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    transition: flex 0.3s, aspect-ratio 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    transition: all 0.4s ease;
 }
 
 .card1::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-size: cover;
     background-position: center;
-    z-index: 1;
     transition: filter 0.3s;
+}
+
+.card1 .title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.card1 .content {
+    display: none;
+    position: absolute;
+    inset: 0;
+    padding: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.card1.expanded {
+    flex: 3;
+}
+
+.card1.expanded::before {
+    filter: brightness(60%);
+}
+
+.card1.expanded .content {
+    display: block;
+}
+
+.card1.expanded .title {
+    display: none;
+}
+
+/* ================= SECTION SPACING ================= */
+.section-block {
+    margin-bottom: 140px;
+    /* 🔥 jarak besar antar section */
+}
+
+
+/* ================= WILDLIFE ================= */
+.card2-container {
+    max-width: 1200px;
+    margin: 90px auto 0;
+    /* 🔥 jarak teks ke gambar wildlife */
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.card2 {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card2:hover {
+    transform: translateY(-6px);
+}
+
+.card2-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card2-content {
+    padding: 16px;
+}
+
+.card2-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card2-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #e7f0dc;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 60px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-brand {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.footer-brand img {
+    width: 100px;
+}
+
+.brand-text h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.brand-text p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-menu h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #1f2f1f;
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom {
+    background-color: #3F4B15;
+    text-align: center;
+    padding: 18px 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar-inner {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu a {
+        margin: 0 10px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .Mpulau {
+        height: 150px;
+    }
+
+    .Mnama-pulau {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .Mflora-fauna,
+    .Mdeskrip-pulau-2,
+    .card2-container,
+    .footer-container {
+        padding: 0 20px;
+    }
 }
 
 /* gambar page sumatera */
@@ -201,222 +413,4 @@ body {
 .container.Papua .card1:nth-child(3)::before {
     /* Bintangur */
     background-image: url('https://yayasanmqis.or.id/wp-content/uploads/2018/01/BUAH-NYAMPLUNG-BINTANGUR-2-calophyllum-inophyllum.jpg');
-}
-
-.card1 .arrow {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #000;
-    z-index: 3;
-}
-
-.card1 .line {
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    right: 10px;
-    height: 2px;
-    background: #fff;
-    box-shadow: 0 1px 2px #000;
-    z-index: 3;
-}
-
-.card1 .title {
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    right: 10px;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
-    font-size: 18px;
-    text-align: center;
-    z-index: 3;
-}
-
-.card1.expanded .title {
-    display: none;
-}
-
-.card1.expanded::before {
-    filter: brightness(50%);
-    /* filter: blur(3px); */
-}
-
-.card1 .content {
-    position: relative;
-    z-index: 2;
-    display: none;
-    text-align: start;
-    padding: 10px;
-    /* background: rgba(80, 79, 79, 0.8); */
-    border-radius: 4px;
-    margin: 20px;
-    color: #fff;
-}
-
-.card1 .content h2 {
-    margin-bottom: 10px;
-}
-
-.card1 .content p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-.card1.expanded {
-    flex: 2;
-    aspect-ratio: 2;
-}
-
-.card1.expanded .content {
-    display: block;
-}
-
-.card1.expanded .arrow {
-    display: none;
-}
-
-.card1.expanded .line {
-    display: none;
-}
-
-hr {
-    margin: 10px 0;
-}
-
-/* Container untuk semua card2 Hewan */
-.card2-container {
-    display: grid;
-    grid-template-columns: repeat(3, 400px);
-    /* 3 kolom, masing-masing 300px */
-    gap: 20px;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-/* Card2 container Hewan*/
-.card2 {
-    width: 400px;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.card2:hover {
-    transform: translateY(-5px);
-}
-
-/* Gambar diatur lewat CSS */
-.card2-image {
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Konten card */
-.card2-content {
-    padding: 15px;
-}
-
-.card2-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.card2-text {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-.footer {
-    background-color: #e7f0dc;
-    padding-top: 40px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-brand {
-    display: flex;
-    gap: 20px;
-    max-width: 500px;
-    align-items: flex-start;
-}
-
-.footer-brand img {
-    width: 110px;
-    height: auto;
-}
-
-.brand-text h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.brand-text p {
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.footer-menu h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-menu ul li {
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.footer-menu ul li a {
-    text-decoration: none;
-    color: #1f2f1f;
-}
-
-.footer-bottom {
-    background-color: #3F4B15;
-    text-align: center;
-    padding: 15px 10px;
-}
-
-.footer-bottom p {
-    color: #fff;
-    font-size: 14px;
-    margin: 0;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-
-
-/* Responsif untuk layar kecil */
-@media (max-width: 480px) {
-    .card2-image {
-        height: 150px;
-    }
 }

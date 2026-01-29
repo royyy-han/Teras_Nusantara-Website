@@ -50,6 +50,70 @@ body {
   border-radius: 20px;
 }
 
+/* ================= DROPDOWN ARTIKEL ================= */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  color: #2f2f2f;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropbtn .arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* isi dropdown */
+.dropdown-content {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f5e9;
+}
+
+/* hover aktif */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
 /* ===== MAIN ===== */
 .main {
   padding: 50px 0;

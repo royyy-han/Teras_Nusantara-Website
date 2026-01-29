@@ -41,9 +41,7 @@
         rel="stylesheet">
 </head>
 
-<body>
-
-
+ <body>
     <nav class="navbar">
         <div class="navbar-inner">
             <div class="brand">
@@ -54,7 +52,20 @@
             <div class="menu">
                 <a href="beranda.html">Beranda</a>
                 <a href="quiz.html">Kuis</a>
-                <a href="artikel.html">Artikel</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Artikel
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="jawa.html">Pulau Jawa</a>
+                        <a href="sumatera.html">Pulau Sumatera</a>
+                        <a href="kalimantan.html">Pulau Kalimantan</a>
+                        <a href="sulawesi.html">Pulau Sulawesi</a>
+                        <a href="papua.html">Pulau Papua</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -471,33 +482,13 @@
                 </div>
             </div>
         </section>
-
-
-
-        <footer class="footer">
-            <div class="footer-container">
-
-                <div class="footer-brand">
-                    <div class="logo">
-                        <img src="img/logo.png" alt="Teras Nusantara Logo">
-                    </div>
-                    <div class="brand-text">
-                        <h2>Teras <span>Nusantara</span></h2>
-                        <p>
-                            Ruang pengetahuan tentang kekayaan flora dan fauna Indonesia.
-                            Hadir untuk mengenalkan keindahan alam Nusantara secara ringkas,
-                            informatif, dan mudah dipahami.
-                        </p>
-                    </div>
-                </div>
-    </section>
-
+  </section>
 
     <footer class="footer">
         <div class="footer-container">
 
             <div class="footer-brand">
-                <img src="logo.png" alt="Logo Teras Nusantara">
+                <img src="img/logo.png" alt="Logo Teras Nusantara">
                 <div class="brand-text">
                     <h2>Teras Nusantara</h2>
                     <p>
@@ -513,7 +504,7 @@
                 <ul>
                     <li><a href="beranda.html">Beranda</a></li>
                     <li><a href="quiz.html">Kuis</a></li>
-                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="jawa.html">Artikel</a></li>
                 </ul>
             </div>
 
@@ -528,14 +519,16 @@
                 </ul>
             </div>
 
+        </div>
 
-            <div class="footer-bottom">
-                <p>2025 | copyright by @AntaresGroup</p>
-            </div>
+        <div class="footer-bottom">
+            <p>2025 | copyright by @AntaresGroup</p>
+        </div>
     </footer>
 
 
     <script src="tentang.js"></script>
+
 </body>
 
 </html>

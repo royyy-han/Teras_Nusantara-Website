@@ -1,13 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<<<<<<< HEAD
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+=======
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>>>>>>> 52d15417d75fa3b05376a3d27f81007360d64554
     <title>Kalimantan</title>
-    <link rel="stylesheet" href="tentang.css">
+    <link rel="stylesheet" href="tentang.css" />
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- font -->
+<<<<<<< HEAD
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <img class="Mpulau" src="img/IDPA.png" alt="Kalimantan" />
+      <p class="Mnama-pulau">Pulau Kalimantan</p>
+      <p class="Mdeskrip-pulau">
+        Pulau Kalimantan adalah pulau terbesar di Indonesia yang dikenal dengan
+        hutan hujan tropisnya yang luas dan kaya keanekaragaman hayati. Pulau
+        ini memiliki banyak sungai besar, seperti Sungai Kapuas, serta menjadi
+        habitat satwa khas seperti orangutan, bekantan, dan burung enggang.
+      </p>
+    </div>
+=======
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -60,10 +86,116 @@
         </div>
     </section>
 
+>>>>>>> 52d15417d75fa3b05376a3d27f81007360d64554
 
     <div class="Mline"></div>
 
     <!-- TANAMAN -->
+<<<<<<< HEAD
+    <div class="Mflora-fauna">Vegetasi Kalimantan</div>
+    <p class="Mdeskrip-pulau-2">
+      Pulau Kalimantan memiliki keanekaragaman flora yang sangat tinggi dan
+      didominasi oleh hutan hujan tropis. Flora Kalimantan berperan penting
+      dalam menjaga keseimbangan ekosistem dan menjadi salah satu kekayaan alam
+      Indonesia.
+    </p>
+
+    <div class="container alt">
+      <div class="card1" onclick="toggle(this)">
+        <div class="arrow">></div>
+        <div class="line"></div>
+        <h3 class="title">Kantong semar berbulu</h3>
+        <div class="content">
+          <h2>Kantong semar berbulu</h2>
+          <p>
+            Kantong semar berbulu (Nepenthes hirsuta) merupakan tumbuhan
+            karnivora khas Pulau Kalimantan. Tanaman ini memiliki kantong
+            perangkap yang ditutupi bulu halus, berfungsi untuk menangkap dan
+            mencerna serangga sebagai sumber nutrisi. Kantong semar berbulu
+            tumbuh di hutan tropis lembap dan mencerminkan keunikan serta
+            keanekaragaman flora Kalimantan..
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div class="card1" onclick="toggle(this)">
+        <div class="arrow">></div>
+        <div class="line"></div>
+        <h3 class="title">Tenggaring</h3>
+        <div class="content">
+          <h2>Tenggaring</h2>
+          <p>
+            Tenggaring merupakan ikan air tawar khas Pulau Kalimantan yang
+            banyak ditemukan di sungai dan perairan pedalaman. Ikan ini memiliki
+            tubuh pipih memanjang dengan warna keperakan dan hidup berkelompok.
+            Tenggaring sering dimanfaatkan sebagai sumber pangan masyarakat
+            lokal serta menjadi bagian dari keanekaragaman fauna perairan
+            Kalimantan.
+          </p>
+          <hr />
+        </div>
+      </div>
+      <div class="card1" onclick="toggle(this)">
+        <div class="arrow">></div>
+        <h3 class="title">Tengkawang</h3>
+        <div class="line"></div>
+        <div class="content">
+          <h2>Tengkawang</h2>
+          <p>
+            Tengkawang merupakan pohon khas Pulau Kalimantan dari marga Shorea
+            yang tumbuh di hutan hujan tropis. Buah tengkawang menghasilkan
+            lemak nabati (minyak tengkawang) yang dimanfaatkan untuk bahan
+            pangan, obat tradisional, dan kosmetik. Pohon ini memiliki nilai
+            ekonomi dan ekologis penting, namun keberadaannya perlu dijaga
+            karena terancam oleh kerusakan hutan.
+          </p>
+          <hr />
+        </div>
+      </div>
+    </div>
+
+    <!-- js script untuk card expand/collapse -->
+    <script>
+      function toggle(card1) {
+        if (card1.classList.contains("expanded")) {
+          card1.classList.remove("expanded");
+        } else {
+          const allCards = document.querySelectorAll(".card1");
+          allCards.forEach((c) => c.classList.remove("expanded"));
+          card1.classList.add("expanded");
+        }
+      }
+    </script>
+
+    <!-- HEWAN -->
+    <div class="Mflora-fauna">Wildlife Kalimantan</div>
+    <p class="Mdeskrip-pulau-2">
+      Pulau Kalimantan memiliki keanekaragaman fauna yang khas dan sebagian
+      bersifat endemik. Fauna Kalimantan berperan penting dalam menjaga
+      keseimbangan ekosistem hutan dan merupakan kekayaan hayati Indonesia yang
+      perlu dilestarikan.
+    </p>
+
+    <div class="card2-container">
+      <!-- Card 1 -->
+      <div class="card2">
+        <div
+          class="card2-image"
+          style="
+            background-image: url(&quot;https://th.bing.com/th/id/R.67dc48e92929e22a48f500b4ed516125?rik=dTw%2bSajXf6h78Q&riu=http%3a%2f%2fwww.borneotourgigant.com%2fdreamingorangutan.JPG&ehk=itSzj65HS0QkKZIMl5sgPuMymX%2fNmlBJxvzhMrVUG2k%3d&risl=1&pid=ImgRaw&r=0&quot;);
+          "
+        ></div>
+        <div class="card2-content">
+          <h3 class="card2-title">Orangutan Kalimantan</h3>
+          <p class="card2-text">
+            Orangutan Kalimantan (Pongo pygmaeus) merupakan primata endemik
+            Pulau Kalimantan yang hidup di hutan hujan tropis. Satwa ini
+            memiliki bulu cokelat kemerahan dan lengan panjang yang digunakan
+            untuk bergerak di pepohonan. Orangutan berperan penting dalam
+            penyebaran biji dan menjaga keseimbangan ekosistem, namun kini
+            terancam punah akibat kerusakan habitat dan perburuan liar.
+          </p>
+=======
     <section class="section-block">
 
         <div class="Mflora-fauna">Vegetasi Kalimantan</div>
@@ -115,8 +247,118 @@
                     <hr>
                 </div>
             </div>
+>>>>>>> 52d15417d75fa3b05376a3d27f81007360d64554
         </div>
+      </div>
 
+<<<<<<< HEAD
+      <!-- Card 2 -->
+      <div class="card2">
+        <div
+          class="card2-image"
+          style="
+            background-image: url(&quot;https://tse1.mm.bing.net/th/id/OIP.jWTZC4GkQhKvNPPnRyrIDAHaEK?w=1200&h=675&rs=1&pid=ImgDetMain&o=7&rm=3&quot;);
+          "
+        ></div>
+        <div class="card2-content">
+          <h3 class="card2-title">Pesut Mahakam</h3>
+          <p class="card2-text">
+            Pesut Mahakam (Orcaella brevirostris) merupakan mamalia air tawar
+            khas Sungai Mahakam, Kalimantan Timur. Hewan ini mirip lumba-lumba,
+            dengan kepala bulat tanpa moncong panjang dan warna tubuh abu-abu.
+            Pesut Mahakam hidup di perairan sungai dan danau, berperan penting
+            dalam ekosistem perairan, namun kini sangat terancam punah akibat
+            pencemaran, aktivitas manusia, dan kerusakan habitat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card2">
+        <div
+          class="card2-image"
+          style="
+            background-image: url(&quot;https://2.bp.blogspot.com/-NfwtnkVw08I/VwTUaEKU41I/AAAAAAAAAJk/E6A6VuKtPqErkcWwNx0e6FdYHQxzRNIYQ/s1600/bekantan-kalimantan.jpg&quot;);
+          "
+        ></div>
+        <div class="card2-content">
+          <h3 class="card2-title">Bekantan</h3>
+          <p class="card2-text">
+            Bekantan (Nasalis larvatus) merupakan primata endemik Pulau
+            Kalimantan yang mudah dikenali dari hidungnya yang besar dan
+            panjang, terutama pada jantan. Bekantan hidup di hutan mangrove,
+            rawa, dan tepi sungai, serta memakan daun, buah, dan biji-bijian.
+            Satwa ini menjadi ikon fauna Kalimantan, namun populasinya terancam
+            akibat kerusakan habitat.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card2-container" style="margin-top: 30px">
+      <!-- Card 4 -->
+      <div class="card2">
+        <div
+          class="card2-image"
+          style="
+            background-image: url(&quot;https://s.kaskus.id/images/2017/06/12/9235218_20170612024640.jpg&quot;);
+          "
+        ></div>
+        <div class="card2-content">
+          <h3 class="card2-title">Kucing Merah Kalimantan</h3>
+          <p class="card2-text">
+            Kucing merah Kalimantan (Catopuma badia) merupakan kucing liar
+            endemik Pulau Kalimantan yang sangat langka. Hewan ini memiliki bulu
+            cokelat kemerahan dengan tubuh ramping dan ekor panjang. Kucing
+            merah hidup di hutan hujan tropis dan bersifat pemalu serta sulit
+            ditemui, sehingga masih jarang diketahui. Keberadaannya kini
+            terancam oleh kerusakan hutan dan perburuan.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card2">
+        <div
+          class="card2-image"
+          style="
+            background-image: url(&quot;https://imgs.mongabay.com/wp-content/uploads/sites/20/2018/01/30123026/Picture4.jpg&quot;);
+          "
+        ></div>
+        <div class="card2-content">
+          <h3 class="card2-title">Gajah Kalimantan</h3>
+          <p class="card2-text">
+            Gajah Kalimantan (Elephas maximus borneensis) merupakan subspesies
+            gajah Asia yang hidup di Pulau Kalimantan, terutama di Kalimantan
+            Utara dan Sabah. Gajah ini memiliki tubuh lebih kecil, telinga lebih
+            lebar, dan sifat yang relatif jinak dibanding gajah Asia lainnya.
+            Gajah Kalimantan hidup di hutan tropis dan dataran rendah, serta
+            berperan penting dalam menjaga keseimbangan ekosistem, namun
+            populasinya terancam akibat hilangnya habitat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card2">
+        <div
+          class="card2-image"
+          style="
+            background-image: url(&quot;https://tse2.mm.bing.net/th/id/OIP.RKbabAiR9LwdsSObi5ed8QHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3&quot;);
+          "
+        ></div>
+        <div class="card2-content">
+          <h3 class="card2-title">Apa yang lainnya?</h3>
+          <p class="card2-text">
+            Kami akan membahas lebih lanjut tentang satwa endemik lainnya di
+            Pulau Sumatera.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+=======
         <!-- HEWAN -->
         <section class="section-block">
 
@@ -290,3 +532,4 @@
 </body>
 
 </html>
+>>>>>>> 52d15417d75fa3b05376a3d27f81007360d64554

@@ -119,7 +119,7 @@ function renderQuestion() {
     // Back
     backBtn.disabled = currentIndex === 0;
 
-    // Next / Submit
+    // Next & Submit
     if (currentIndex === quizQuestions.length - 1) {
         nextBtn.classList.add("hidden");
         submitBtn.classList.remove("hidden");
@@ -163,11 +163,6 @@ backBtn.addEventListener("click", () => {
 
 submitBtn.addEventListener("click", () => {
     const hasAnsweredAtLeastOne = userAnswers.some(a => a !== null);
-
-    if (!hasAnsweredAtLeastOne) {
-        alert("⚠️ Kamu belum menjawab satu pun soal.\nMinimal jawab 1 soal ya 😊");
-        return;
-    }
 
     let score = 0;
     quizQuestions.forEach((q, i) => {

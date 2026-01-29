@@ -1,16 +1,14 @@
-/* ==================================================
-   RESET & BASE
-================================================== */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background-color: #F9F4F0;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
 
 :root {
   --max-width: 1200px;
@@ -19,9 +17,7 @@ body {
   --soft-green: #e4ead6;
 }
 
-/* ==================================================
-   NAVBAR
-================================================== */
+/* ==================== NAVBAR ============================== */
 .navbar {
   background: var(--soft-green);
 }
@@ -60,9 +56,6 @@ body {
   font-size: 1rem;
 }
 
-/* ==================================================
-   DROPDOWN ARTIKEL (STABLE)
-================================================== */
 .dropdown {
   position: relative;
 }
@@ -102,7 +95,6 @@ body {
   transition: 0.25s ease;
 }
 
-/* area aman agar tidak gampang hilang */
 .dropdown-content::before {
   content: "";
   position: absolute;
@@ -136,9 +128,7 @@ body {
   transform: rotate(180deg);
 }
 
-/* ==================================================
-   HERO
-================================================== */
+/* ==================== HERO SECTION ============================== */
 .hero {
   max-width: var(--max-width);
   margin: auto;
@@ -168,9 +158,6 @@ body {
   line-height: 1.7;
 }
 
-/* ==================================================
-   DIVIDER
-================================================== */
 .Mline {
   width: 100%;
   height: 5px;
@@ -178,9 +165,6 @@ body {
   margin: 40px 0;
 }
 
-/* ==================================================
-   SECTION TITLE
-================================================== */
 .Mflora-fauna {
   max-width: var(--max-width);
   margin: 60px auto 10px;
@@ -314,7 +298,7 @@ body {
 
 .footer-container {
   max-width: 1200px;
-  margin: 20px;
+  margin: auto;
   padding: 60px 60px;
 
   display: grid;
@@ -377,10 +361,6 @@ body {
   font-size: 14px;
 }
 
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
 @media (max-width: 768px) {
   .navbar-inner {
     flex-direction: column;

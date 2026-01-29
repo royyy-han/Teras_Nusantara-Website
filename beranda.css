@@ -27,6 +27,41 @@ nav {
   width: 120px;
 }
 
+nav .nama-web {
+  margin-left: 4%;
+}
+
+nav .nama-web p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+nav .nama-web h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu-nav {
+  width: 50%;
+}
+
+nav .menu-nav ul {
+  display: flex;
+  justify-content: end;
+  gap: 100px;
+  padding: 0 60px;
+  
+}
+
+nav .menu-nav ul li {
+  list-style: none;
+}
+
+nav .menu-nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
 header {
   background-image: url(img/hero.png);
   height: 100vh;
@@ -39,7 +74,7 @@ header {
 header .tagline {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 26%;
   transform: translate(-25%, -50%);
 }
 
@@ -69,45 +104,12 @@ header .tagline p {
   background: #fff;
   color: #000;
 }
-
-nav .nama-web {
-  margin-left: 3%;
-}
-
-nav .nama-web span {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-nav .nama-web h3 {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.menu-nav {
-  width: 50%;
-}
-
-nav .menu-nav ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-nav .menu-nav ul li {
-  list-style: none;
-}
-
-nav .menu-nav ul li a {
-  text-decoration: none;
-  color: white;
-}
-
+/* body */
 .about {
   background: #f7f3ec;
   padding: 80px 100px;
 }
 
-/* GRID 2 KOLOM */
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,14 +117,12 @@ nav .menu-nav ul li a {
   align-items: center;
 }
 
-/* GAMBAR */
 .about-image img {
   width: 100%;
   border-radius: 20px;
   object-fit: cover;
 }
 
-/* TEKS */
 .about-label {
   position: relative;
   padding-left: 50px;
@@ -159,7 +159,6 @@ nav .menu-nav ul li a {
   max-width: 520px;
 }
 
-/* STATISTIK */
 .stats {
   display: flex;
   gap: 50px;
@@ -217,6 +216,68 @@ nav .menu-nav ul li a {
   line-height: 1.7;
 }
 
+.islands {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.islands h2 {
+    margin-bottom: 5px;
+}
+
+.sub {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card a {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card.active {
+    border: 3px solid #2b7cff;
+}
+
+/* footer */
 .footer-menu h3 {
   font-size: 16px;
   margin-bottom: 10px;

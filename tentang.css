@@ -1,403 +1,415 @@
+/* ==================================================
+   RESET & BASE
+================================================== */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #F9F4F0;
-    font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  background-color: #F9F4F0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
-/* ================= NAVBAR ================= */
+:root {
+  --max-width: 1200px;
+  --side-padding: clamp(20px, 5vw, 60px);
+  --primary: #104026;
+  --soft-green: #e4ead6;
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
 .navbar {
-    background: #e4ead6;
-    padding: 20px 0;
+  background: var(--soft-green);
 }
 
 .navbar-inner {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 60px;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 20px var(--side-padding);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .brand h1 {
-    margin: 0;
-    font-size: 24px;
+  margin: 0;
+  font-size: 1.4rem;
 }
 
 .brand p {
-    margin: 4px 0 0;
-    font-size: 14px;
-    color: #555;
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .menu a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #2f2f2f;
-    font-size: 16px;
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 1rem;
 }
 
-/* ================= DROPDOWN ARTIKEL ================= */
+/* ==================================================
+   DROPDOWN ARTIKEL (STABLE)
+================================================== */
 .dropdown {
   position: relative;
-  display: inline-block;
 }
 
 .dropbtn {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 16px;
-  cursor: pointer;
+  font-size: 1rem;
   color: #2f2f2f;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.dropbtn .arrow {
+.arrow {
   font-size: 12px;
   transition: transform 0.3s ease;
 }
 
-/* isi dropdown */
 .dropdown-content {
   position: absolute;
-  top: 130%;
+  top: calc(100% + 14px);
   right: 0;
-  background-color: #ffffff;
+
+  background: #fff;
   min-width: 220px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   overflow: hidden;
+  z-index: 99;
 
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(8px);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: 0.25s ease;
+}
+
+/* area aman agar tidak gampang hilang */
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
 }
 
 .dropdown-content a {
   display: block;
   padding: 12px 18px;
-  text-decoration: none;
+  font-size: 0.9rem;
   color: #2f2f2f;
-  font-size: 14px;
-  transition: background 0.2s;
+  text-decoration: none;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f5e9;
+  background: #f1f5e9;
 }
 
-/* hover aktif */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-.dropdown:hover .arrow {
+.dropdown:hover .arrow,
+.dropdown:focus-within .arrow {
   transform: rotate(180deg);
 }
 
-
-/* ================= HERO ================= */
+/* ==================================================
+   HERO
+================================================== */
 .hero {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: auto;
-    padding: 80px 60px;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: clamp(50px, 8vw, 80px) var(--side-padding);
+
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
 }
 
 .Mpulau {
-    height: 220px;
-    width: auto;
-    flex-shrink: 0;
+  height: clamp(140px, 20vw, 220px);
+  flex-shrink: 0;
 }
 
 .hero-text {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .Mnama-pulau {
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 20px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 20px;
 }
 
 .Mdeskrip-pulau {
-    font-weight: 300;
-    line-height: 1.7;
+  font-weight: 300;
+  line-height: 1.7;
 }
 
-/* ================= LINE ================= */
+/* ==================================================
+   DIVIDER
+================================================== */
 .Mline {
-    width: 100%;
-    height: 5px;
-    background-color: #104026;
-    margin: 40px 0;
+  width: 100%;
+  height: 5px;
+  background: var(--primary);
+  margin: 40px 0;
 }
 
-/* ================= SECTION TITLE ================= */
+/* ==================================================
+   SECTION TITLE
+================================================== */
 .Mflora-fauna {
-    max-width: 1200px;
-    margin: 60px auto 10px;
-    padding: 0 60px;
-    font-size: 3rem;
-    font-weight: 800;
+  max-width: var(--max-width);
+  margin: 60px auto 10px;
+  padding: 0 var(--side-padding);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
 }
 
 .Mdeskrip-pulau-2 {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 60px 40px;
-    font-weight: 300;
-    line-height: 1.7;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 var(--side-padding) 40px;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
-/* ================= VEGETASI (CARD EXPAND) ================= */
+/* ==================================================
+   VEGETASI (EXPAND CARD)
+================================================== */
 .container {
-    display: flex;
-    gap: 24px;
-    max-width: 1200px;
-    margin: 80px auto 0;
-    padding: 0 60px;
-}
+  max-width: var(--max-width);
+  margin: 80px auto 0;
+  padding: 0 var(--side-padding);
 
+  display: flex;
+  gap: 24px;
+}
 
 .card1 {
-    flex: 1;
-    height: 420px;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s ease;
+  flex: 1;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
 }
 
 .card1::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    transition: filter 0.3s;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s;
 }
 
 .card1 .title {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    z-index: 2;
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: #fff;
+  font-weight: 600;
+  z-index: 2;
 }
 
 .card1 .content {
-    display: none;
-    position: absolute;
-    inset: 0;
-    padding: 30px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.55);
+  display: none;
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
 }
 
 .card1.expanded {
-    flex: 3;
+  flex: 3;
 }
 
 .card1.expanded::before {
-    filter: brightness(60%);
+  filter: brightness(60%);
 }
 
 .card1.expanded .content {
-    display: block;
+  display: block;
 }
 
 .card1.expanded .title {
-    display: none;
+  display: none;
 }
 
-/* ================= SECTION SPACING ================= */
-.section-block {
-    margin-bottom: 140px;
-    /* 🔥 jarak besar antar section */
-}
-
-
-/* ================= WILDLIFE ================= */
+/* ==================================================
+   WILDLIFE
+================================================== */
 .card2-container {
-    max-width: 1200px;
-    margin: 90px auto 0;
-    /* 🔥 jarak teks ke gambar wildlife */
-    padding: 0 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 28px;
+  max-width: var(--max-width);
+  margin: 90px auto ;
+  padding: 0 var(--side-padding);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
 }
 
 .card2 {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
 .card2:hover {
-    transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .card2-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
 
 .card2-content {
-    padding: 16px;
+  padding: 16px;
 }
 
 .card2-title {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .card2-text {
-    font-size: 0.95rem;
-    color: #555;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 /* ================= FOOTER ================= */
 .footer {
-    background-color: #e7f0dc;
+  background-color: #e7f0dc;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 60px 60px;
+  max-width: 1200px;
+  margin: 20px;
+  padding: 60px 60px;
 
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
 }
 
 .footer-brand {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
 .footer-brand img {
-    width: 100px;
+  width: 100px;
 }
 
 .brand-text h2 {
-    margin: 0;
-    font-size: 22px;
+  margin: 0;
+  font-size: 22px;
 }
 
 .brand-text p {
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 1.7;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .footer-menu h3 {
-    font-size: 16px;
-    margin-bottom: 14px;
+  font-size: 16px;
+  margin-bottom: 14px;
 }
 
 .footer-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-menu ul li {
-    margin-bottom: 10px;
-    font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .footer-menu ul li a {
-    text-decoration: none;
-    color: #1f2f1f;
+  text-decoration: none;
+  color: #1f2f1f;
 }
 
 /* ===== FOOTER BOTTOM ===== */
 .footer-bottom {
-    background-color: #3F4B15;
-    text-align: center;
-    padding: 18px 10px;
+  background-color: #3F4B15;
+  text-align: center;
+  padding: 18px 10px;
 }
 
 .footer-bottom p {
-    margin: 0;
-    color: #fff;
-    font-size: 14px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
 }
 
-/* ================= RESPONSIVE ================= */
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
 @media (max-width: 768px) {
-    .navbar-inner {
-        padding: 0 20px;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+  .navbar-inner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 
-    .menu a {
-        margin: 0 10px;
-    }
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-    .footer-container {
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-        gap: 40px;
-        text-align: center;
-    }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .footer-brand {
-        justify-content: center;
-    }
+  .container {
+    flex-direction: column;
+  }
 
-    .hero {
-        flex-direction: column;
-        padding: 60px 20px;
-        text-align: center;
-    }
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    .Mpulau {
-        height: 150px;
-    }
-
-    .Mnama-pulau {
-        font-size: 2.5rem;
-    }
-
-    .container {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-
-    .Mflora-fauna,
-    .Mdeskrip-pulau-2,
-    .card2-container,
-    .footer-container {
-        padding: 0 20px;
-    }
+  .footer-brand {
+    justify-content: center;
+  }
 }
 
 /* gambar page sumatera */

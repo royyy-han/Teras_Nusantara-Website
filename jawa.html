@@ -32,13 +32,20 @@
     </header>
 
 
-    <div>
-        <img class="Mpulau" src="img/IDPA.png" alt="Kalimantan" />
-        <p class="Mnama-pulau">Pulau Jawa</p>
-        <P class="Mdeskrip-pulau">Pulau Jawa adalah pusat pemerintahan dan kegiatan ekonomi Indonesia dengan kepadatan
-            penduduk tertinggi. Pulau ini memiliki budaya yang beragam, sejarah panjang, serta bentang alam yang
-            didominasi pegunungan, gunung berapi, dan dataran subur.</P>
-    </div>
+    <section class="hero">
+        <img class="Mpulau" src="img/IDPA.png" alt="Pulau Jawa">
+
+        <div class="hero-text">
+            <h1 class="Mnama-pulau">Pulau Jawa</h1>
+            <p class="Mdeskrip-pulau">
+                Pulau Jawa adalah pusat pemerintahan dan kegiatan ekonomi Indonesia
+                dengan kepadatan penduduk tertinggi. Pulau ini memiliki budaya yang
+                beragam, sejarah panjang, serta bentang alam yang didominasi
+                pegunungan, gunung berapi, dan dataran subur.
+            </p>
+        </div>
+    </section>
+
 
     <div class="Mline"></div>
 
@@ -89,19 +96,6 @@
             </div>
         </div>
     </div>
-
-    <!-- js script untuk card expand/collapse -->
-    <script>
-        function toggle(card1) {
-            if (card1.classList.contains('expanded')) {
-                card1.classList.remove('expanded');
-            } else {
-                const allCards = document.querySelectorAll('.card1');
-                allCards.forEach(c => c.classList.remove('expanded'));
-                card1.classList.add('expanded');
-            }
-        }
-    </script>
 
     <!-- HEWAN -->
     <div class="Mflora-fauna">Wildlife Jawa</div>
@@ -226,9 +220,12 @@
 
             <div class="footer-menu">
                 <h3>Media Sosial</h3>
-                 <ul>
-                    <li>Ig : <a href="https://www.instagram.com/terasnusantara__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">terasnusantara_</a></li>
-                    <li>Website : <a href="https://github.com/royyy-han/Teras_Nusantara-Website">Teras_Nusantara-Website</a></li>
+                <ul>
+                    <li>Ig : <a
+                            href="https://www.instagram.com/terasnusantara__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">terasnusantara_</a>
+                    </li>
+                    <li>Website : <a
+                            href="https://github.com/royyy-han/Teras_Nusantara-Website">Teras_Nusantara-Website</a></li>
                 </ul>
             </div>
 
@@ -240,6 +237,7 @@
         </div>
     </footer>
 
+    <script src="tentang.js"></script>
 
 </body>
 
